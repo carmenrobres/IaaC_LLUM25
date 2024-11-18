@@ -3,5 +3,11 @@ source env/bin/activate #MAC/LINUX
 .\env\Scripts\activate #Windows
 pip install -r requirements.txt
 
+Create .env file and add
+OPENAI_API_KEY=????
 
+Activate by running main.py
+
+In parallel
+python -m uvicorn app_display:app --reload
 

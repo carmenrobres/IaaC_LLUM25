@@ -1,7 +1,7 @@
 from Speech2Text_V3 import SpeechToText
 
 # Initialize SpeechToText instance with your API key
-stt = SpeechToText(api_key="your_openai_api_key")  # Replace with your actual API key
+stt = SpeechToText(api_key="")  # Replace with your actual API key
 
 def handle_trigger_signal(signal):
     """Function to handle incoming signals and trigger transcription if signal is (1,)"""
