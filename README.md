@@ -3,7 +3,7 @@
 This project provides a web-based interface for generating and displaying city images using an AI model. The system integrates a FastAPI backend with a frontend interface that updates dynamically based on user input.
 Forked from [Jorge's Repo](https://github.com/jmuozan/IaaC_LLUM25)
 ## Features
-- Generates images based on AI prompts and displays them in a web interface.
+- Generates images based on AI prompts and displays them in a web interface. Transcribes 3 prompts and generates an image. It is constantly on loop but you need to click "1" in order to reactivate the transcribing system
 - Real-time updates using WebSockets for a responsive user experience.
 - Typewriter effect for displaying prompts on the webpage.
 - Automatically refreshes the displayed image when a new one is generated.
@@ -59,7 +59,7 @@ Forked from [Jorge's Repo](https://github.com/jmuozan/IaaC_LLUM25)
 
 ## Known Issues
 
-- **Image Update Issue**: The image is reloaded using a timestamp to prevent caching issues (`reloadImage()` function in `index.html`). However, if a new image is not generated in the `static/Generated_Images` folder, the displayed image may not update properly. Ensure the image file is updated by the `main.py` script.
+- **Image Update Issue**: The image does not reupload properly. The image is reloaded using a timestamp to prevent caching issues (`reloadImage()` function in `index.html`). However, if a new image is not generated in the `static/Generated_Images` folder, the displayed image may not update properly. Ensure the image file is updated by the `main.py` script.
 
 - **Prompt Box Limit**: Currently, there is no limit on the number of prompt boxes shown on the left panel. This can be resolved by modifying the `notify_clients()` function in `app_display.py` to limit the number of displayed sentences.
 
